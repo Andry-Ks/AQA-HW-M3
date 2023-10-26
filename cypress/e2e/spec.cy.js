@@ -13,7 +13,7 @@ describe("Login and Logout Test 1", () => {
     loginPage.navigate();
 
     // Використовуємо команду login для входу
-    loginPage.signIn1();
+    loginPage.signIn("user888@gmail.com", "1234567890");
 
     // Знаходимо та клікаємо на кнопку для відкриття меню сайту
     homePage.openMenu();
@@ -33,7 +33,7 @@ describe("Login and Logout Test 2", () => {
     loginPage.navigate();
 
     // Використовуємо команду login для входу
-    loginPage.signIn2();
+    loginPage.signIn("testowyqa@qa.team", "QA!automation-1");
 
     // Знаходимо та клікаємо на кнопку для відкриття меню сайту
     homePage.openMenu();
