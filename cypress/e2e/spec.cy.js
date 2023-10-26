@@ -1,28 +1,28 @@
 //npx cypress open
 
-import { Login } from "./pages/Login";
-const LoginPage = new Login();
+import { LoginPage } from "./pages/Login";
+const loginPage = new LoginPage();
 
-import { HomeP } from "./pages/HomePage";
-const HomePage = new HomeP();
+import { HomePage } from "./pages/HomePage";
+const homePage = new HomePage();
 
 // Тест №1
 describe("Login and Logout Test 1", () => {
   it("should login and logout for user 1", () => {
     // Відкрити сторінку
-    LoginPage.navigate();
+    loginPage.navigate();
 
     // Використовуємо команду login для входу
-    LoginPage.signIn1();
+    loginPage.signIn1();
 
     // Знаходимо та клікаємо на кнопку для відкриття меню сайту
-    HomePage.openMenu();
+    homePage.openMenu();
 
     // Знаходимо кнопку "Log out" в меню та клікаємо на неї
-    HomePage.logOut();
+    homePage.logOut();
 
     // Перевіряємо, що повернулися на сторінку
-    HomePage.check();
+    homePage.check();
   });
 });
 
@@ -30,18 +30,18 @@ describe("Login and Logout Test 1", () => {
 describe("Login and Logout Test 2", () => {
   it("should login and logout for user 2", () => {
     // Відкрити сторінку
-    LoginPage.navigate();
+    loginPage.navigate();
 
     // Використовуємо команду login для входу
-    LoginPage.signIn2();
+    loginPage.signIn2();
 
     // Знаходимо та клікаємо на кнопку для відкриття меню сайту
-    HomePage.openMenu();
+    homePage.openMenu();
 
     // Знаходимо кнопку "Log out" в меню та клікаємо на неї
-    HomePage.logOut();
+    homePage.logOut();
 
     // Перевіряємо, що повернулися на сторінку
-    HomePage.check();
+    homePage.check();
   });
 });
