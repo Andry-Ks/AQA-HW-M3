@@ -1,5 +1,3 @@
-//npx cypress open
-
 import { LoginPage } from "./pages/Login";
 const loginPage = new LoginPage();
 
